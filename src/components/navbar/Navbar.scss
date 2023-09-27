@@ -1,0 +1,9 @@
+@import '../../index.scss';
+
+.navbar {
+  background-color: var(--dark-gray-1);
+
+  .navbar-brand {
+    color: var(--light-gray-1) !important;
+  }
+}
