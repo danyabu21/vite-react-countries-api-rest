@@ -11,6 +11,7 @@
     "@anatoliygatt/dark-mode-toggle": "^1.0.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "axios": "^1.5.1",
     "immer": "^10.0.2",
     "react": "^17.0.2",
     "react-axios": "^2.0.6",

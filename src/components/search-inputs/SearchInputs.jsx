@@ -7,7 +7,7 @@ const SearchInputs = () => {
   const { regions } = useStore((store) => store.state);
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid my-4">
       <div className="row d-flex ps-0 pe-0 justify-content-between">
         <div className="col-12 col-sm-3 ps-0 pe-0">
           <div className="input-group mb-3  ">
@@ -27,7 +27,7 @@ const SearchInputs = () => {
           isMulti
           name="regions"
           options={regions}
-          className="basic-multi-select col-12 col-sm-2 ps-0 pe-0"
+          className="basic-multi-select col-12 col-sm-2 ps-0 pe-0 "
           classNamePrefix="select"
         />
       </div>
