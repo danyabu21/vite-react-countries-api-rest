@@ -1,8 +1,10 @@
 import React from 'react';
-import axios from 'axios';
 import './Main.scss';
+import axios from 'axios';
+
 import { SearchInputs } from '../search-inputs';
 import { Card } from '../card';
+
 const Main = () => {
   const [countries, setCountries] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -22,8 +24,10 @@ const Main = () => {
 
   return (
     <main className="main p-2 p-sm-4">
-      <SearchInputs />
-      <section className="cards row d-flex justify-content-between mt-5 m-auto">
+      <div className="mx-2">
+        <SearchInputs />
+      </div>
+      <section className="cards row d-flex justify-content-between mt-5 m-auto ">
         {countries &&
           countries.map(
             ({ name, flags, population, region, capital }, index) => (

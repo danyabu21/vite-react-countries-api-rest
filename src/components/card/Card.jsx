@@ -3,10 +3,10 @@ import './Card.scss';
 
 const Card = ({ name, image, population, region, capital, ...props }) => {
   return (
-    <div className="card">
-      <img src={image} className="card-img-top" alt="..." />
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
+    <div className="card mx-2">
+      <img src={image} className="card-img-top shadow-sm" alt={name} />
+      <div className="card-body d-flex flex-column align-items-start">
+        <h5 className="card-title d-block">{name}</h5>
         <div className="details mb-3">
           <p className="card-text fw-bold">
             Population:{' '}
