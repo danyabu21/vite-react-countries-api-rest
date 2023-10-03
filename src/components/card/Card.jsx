@@ -1,9 +1,10 @@
 import React from 'react';
 import './Card.scss';
-
+import { Link } from 'react-router-dom';
 const Card = ({ name, image, population, region, capital, ...props }) => {
+  
   return (
-    <div className="card mx-2">
+    <Link className="card mx-2" to={`/${name.toLowerCase()}`}>
       <img src={image} className="card-img-top shadow-sm" alt={name} />
       <div className="card-body d-flex flex-column align-items-start">
         <h5 className="card-title d-block">{name}</h5>
@@ -22,7 +23,7 @@ const Card = ({ name, image, population, region, capital, ...props }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 import { SearchInputs } from '../search-inputs';
 import { Card } from '../card';
 
@@ -27,22 +27,24 @@ const Main = () => {
       <div className="mx-2">
         <SearchInputs />
       </div>
-      <section className="cards row d-flex justify-content-between mt-5 m-auto ">
+      <ul className="cards row d-flex justify-content-between mt-5 m-auto ">
         {countries &&
           countries.map(
-            ({ name, flags, population, region, capital }, index) => (
-              <Card
-                className="col-12 col-md-4 mb-4"
-                key={index}
-                name={name.common}
-                image={flags.png}
-                population={population}
-                region={region}
-                capital={capital}
-              />
-            )
+            ({ name, flags, population, region, capital }, index) => {
+              return (
+                <Card
+                  key={index}
+                  className="col-12 col-md-4 mb-4"
+                  name={name.common}
+                  image={flags.png}
+                  population={population}
+                  region={region}
+                  capital={capital}
+                />
+              );
+            }
           )}
-      </section>
+      </ul>
     </main>
   );
 };
